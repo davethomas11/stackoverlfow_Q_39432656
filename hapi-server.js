@@ -105,8 +105,6 @@ server.route({
 
 function createUserSchema() {
 	return {
-				params: {
-                	mobile: Joi.number().integer().min(10)
-            	}
+			mobile: Joi.number().integer().min(10)
         }
 }
