@@ -1,0 +1,16 @@
+{
+  "name": "hapi-stackie-overflowie-question",
+  "version": "1.0.0",
+  "description": "Quick mock up project to investigate stack over flow question 39432656",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dave Anthony Thomas",
+  "license": "ISC",
+  "dependencies": {
+    "boom": "^4.0.0",
+    "hapi": "^15.0.3",
+    "joi": "^9.0.4"
+  }
+}
