@@ -15,6 +15,8 @@ server.start((err) => {
     console.log(`Server running at: ${server.info.uri}`);
 });
 
+const createUserSchema = Joi.object({ mobile: Joi.number().min(10).required() }); 
+
 //Mocked mongo behaviour for test
 var User =  function () {
 
@@ -98,13 +100,8 @@ server.route({
         },
         // Validate the payload against the Joi schema
         validate: {
-            payload: createUserSchema()
+            payload: createUserSchema
         }
     }
 });
 
-function createUserSchema() {
-	return {
-			mobile: Joi.number().integer().min(10)
-        }
-}
