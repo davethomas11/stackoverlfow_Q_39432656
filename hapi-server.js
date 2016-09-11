@@ -7,13 +7,17 @@ const Joi = require('joi');
 const server = new Hapi.Server();
 server.connection({ port: 3000 });
 
-server.start((err) => {
+if (!module.parent) {
+    server.start((err) => {
 
-    if (err) {
-        throw err;
-    }
-    console.log(`Server running at: ${server.info.uri}`);
-});
+        if (err) {
+            throw err;
+        }
+        console.log(`Server running at: ${server.info.uri}`);
+    });
+}
+
+module.exports = server;
 
 const createUserSchema = Joi.object({ mobile: Joi.number().min(10).required() }); 
 
