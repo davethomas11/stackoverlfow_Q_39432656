@@ -4,6 +4,7 @@
   "description": "Quick mock up project to investigate stack over flow question 39432656",
   "main": "index.js",
   "scripts": {
+    "start": "node server.js",
     "test": "lab -a code -v -t 80 -L"
   },
   "author": "Dave Anthony Thomas",
