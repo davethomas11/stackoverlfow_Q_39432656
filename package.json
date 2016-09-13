@@ -4,15 +4,18 @@
   "description": "Quick mock up project to investigate stack over flow question 39432656",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "test": "lab -a code -v -t 80 -L"
   },
   "author": "Dave Anthony Thomas",
   "license": "ISC",
   "dependencies": {
     "boom": "^4.0.0",
-    "code": "^3.0.2",
     "hapi": "^15.0.3",
-    "joi": "^9.0.4",
+    "joi": "^9.0.4"
+  },
+  "devDependencies": {
+    "code": "^3.0.2",
     "lab": "^11.0.1"
   }
 }
